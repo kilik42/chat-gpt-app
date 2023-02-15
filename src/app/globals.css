@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom utility classes */
+/* @layer components {
+    .infoText{
+        @apply p-4 bg-gray-700/50 rounded-lf max-w-[300px]
+        
+    }
+} */
