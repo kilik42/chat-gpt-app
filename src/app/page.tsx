@@ -10,9 +10,9 @@ export default function Page() {
     <div className='flex flex-col items-center justify-center h-screen px-2 text-white'>
       <h1 className="text-5xl font-bold mb-20">chat gpt messenger</h1>
       <h1 className="text-5xl font-bold mb-20">Hancock High School</h1>
-      <div>
+      <div className='flex space-x-6'>
         
-        <div>
+        <div >
           <div className='flex flex-col items-center mb-5'>
             {/* sun icon */}
             <SunIcon className="h-8 w-8" />
@@ -43,9 +43,6 @@ export default function Page() {
           <p className="infoText"> messages are stored in firebase's firestore</p>
           <p className="infoText">hot notifications when chat gpt is thinking</p>
          
-
-
-
           </div>
         </div>
         {/* END DIV */}
