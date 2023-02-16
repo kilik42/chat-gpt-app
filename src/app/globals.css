@@ -5,10 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
+
 @layer components {
     .infoText{
-        @apply p-4 bg-gray-700/50 rounded-lf max-w-[300px]
+        @apply p-4 bg-gray-700/50 rounded-lg max-w-[300px]
         
     }
-} */
+    .chatRow{
+        @apply flex items-center px-5 space-x-4 p-4 hover:bg-gray-700/50 rounded-lg cursor-pointer text-gray-400 transition-all duration-200 ease-out;
+
+        
+    }
+}
