@@ -8,8 +8,8 @@ import {BoltIcon, ExclamationCircleIcon, ExclamationTriangleIcon, SunIcon} from 
 export default function Page() {
   return (
     <div className='flex flex-col items-center justify-center h-screen px-2 text-white'>
-      <h1 className="text-5xl font-bold mb-20">chat gpt messenger</h1>
-      <h1 className="text-5xl font-bold mb-20">Hancock High School</h1>
+      <h1 className="text-5xl font-bold mb-20">Hancock chat gpt </h1>
+      {/* <h1 className="text-5xl font-bold mb-20"></h1> */}
       <div className='flex space-x-6'>
         
         <div >
