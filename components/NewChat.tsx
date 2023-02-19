@@ -6,7 +6,11 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation' // not router but navigation
 import React from 'react'
 import {db} from '../firebase';
-function NewChat() {
+
+type Props ={
+  id: string;
+}
+function NewChat({id}: Props) {
   const router = useRouter()
   const {data: session} = useSession()
   const createNewChat = async  () => {
