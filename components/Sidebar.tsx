@@ -2,10 +2,17 @@
 import React from 'react'
 import { useSession, signOut } from 'next-auth/react'
 import NewChat from './NewChat'
+import { useCollection } from 'react-firebase-hooks/firestore'
+import { collection } from 'firebase/firestore'
+import { db } from 'firebase'
+import ChatRow from './ChatRow'
 
 function Sidebar() {
   const {data: session} = useSession()
 
+  const [chats, loading, error]  = useCollection(
+    session && collection(db, 'users', session?.user?.email!, 'chats')
+  )
 
 
   return (
@@ -19,7 +26,12 @@ function Sidebar() {
                     
                 </div>
                 {/* map through the chat rows */}
-
+              {chats?.docs.map((chat) => (
+                <ChatRow 
+                key={chat.id} 
+                id={chat.id} 
+                users={chat.data().users}/>
+              ))}
             
         </div>
         {session && 
